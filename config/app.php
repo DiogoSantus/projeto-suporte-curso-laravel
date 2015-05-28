@@ -123,11 +123,11 @@ return [
         /*
          * Application Service Providers...
          */
-        'App\Providers\AppServiceProvider',
-        'App\Providers\BusServiceProvider',
-        'App\Providers\ConfigServiceProvider',
-        'App\Providers\EventServiceProvider',
-        'App\Providers\RouteServiceProvider',
+        'Suporte\Providers\AppServiceProvider',
+        'Suporte\Providers\BusServiceProvider',
+        'Suporte\Providers\ConfigServiceProvider',
+        'Suporte\Providers\EventServiceProvider',
+        'Suporte\Providers\RouteServiceProvider',
         
         'Collective\Html\HtmlServiceProvider',
         
