@@ -6231,3 +6231,30 @@ label,
 .checkbox label {
   font-weight: 300;
 }
+
+.content {
+    padding: 1em;
+}
+
+.header {
+    padding: 1em;
+    background-color: #669;
+    color: #ccc;
+}
+
+footer {
+    padding: 1em;
+    background-color: #333;
+    color: #999;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 80px;
+}
+
+label {
+    width: 7em;
+    border-bottom: 1px solid #ddd;
+}
+
