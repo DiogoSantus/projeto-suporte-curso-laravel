@@ -3,16 +3,16 @@
 @section('sample.feature', 'Form e Input')
 @section('sample.title', 'Suporte')
 
-@section('menu')
-    @include('suporte.menu')
-@stop
+@section('menu')@include('suporte.menu')@stop
 
 @section('content')
 
 {!! Form::open(array('url' => 'suporte')) !!}
+<fieldset>
+    <legend>Solicitação de suporte</legend>
     
-    {!! Form::label('cliente', 'Nome') !!}
-    {!! Form::text('cliente', null, ['placeholder'=>'digite seu nome']) !!}
+    {!! Form::label('nome', 'Nome') !!}
+    {!! Form::text('nome', null, ['placeholder'=>'digite seu nome']) !!}
 
     <br/>
 
@@ -26,9 +26,9 @@
 
     <br/>
 
-    {!! Form::label('produto', 'Produto') !!}
-    {{-- O array de produtos eh forcado para iniciar no indice 1 --}}
-    {!! Form::select('produto', [1=>'Monitor', 'CPU', 'Impressora', 'Scanner', 'Mouse', 'Teclado']) !!}
+    {!! Form::label('produto_id', 'Produto') !!}
+    {{-- Usamos o modelo de produtos --}}
+    {!! Form::select('produto_id', $produtos->lists('nome','id')) !!}
 
     <br/>
 
@@ -39,6 +39,7 @@
 
     {!! Form::submit('Enviar') !!}
 
+</fieldset>
 {!! Form::close() !!}
 
 @stop

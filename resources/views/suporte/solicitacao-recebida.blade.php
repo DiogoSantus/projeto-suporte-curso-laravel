@@ -3,6 +3,8 @@
 @section('sample.feature', 'Form e Input')
 @section('sample.title', 'Suporte')
 
+@section('menu')@include('suporte.menu')@stop
+
 @section('content')
 
 <h3>
