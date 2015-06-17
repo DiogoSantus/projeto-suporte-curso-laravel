@@ -21,6 +21,8 @@ Route::controllers([
 /* Rotas para o exemplo de formulário de suporte */
 
 Route::controller('suporte', 'SuporteController');
+Route::get('produto/{id}/excluir', 'ProdutoController@excluir');
+Route::resource('produto', 'ProdutoController');
 
 Route::get('ola', function() {
 	$html = "<h1>Olá mundo</h1>";

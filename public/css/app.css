@@ -6267,7 +6267,7 @@ th {
     padding-bottom: 0.1em;
     background-color: #eef;
     border-bottom: 3px double #ccf;
-}
+}\
 
 tr {
     border-bottom: 1px solid #ccc;
@@ -6286,4 +6286,18 @@ tr {
 
 #menu ul:after {
     clear: both;
+}
+
+.msg-erro {
+    padding: 1em;
+    align: center;
+    background-color: #fcc;
+    color: #933;
+}
+
+.msg-sucesso {
+    padding: 1em;
+    align: center;
+    background-color: #cfc;
+    color: #393;    
 }
