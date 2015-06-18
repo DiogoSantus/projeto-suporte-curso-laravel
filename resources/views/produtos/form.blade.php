@@ -7,6 +7,8 @@
 
 @section('content')
 
+@include('layout.mensagens')
+
 @if ($acao == 'edit')
 {!! Form::model($produto, array('url' => 'produto/'.$produto->id, 'method' => 'put')) !!}
 @else
