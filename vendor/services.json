@@ -22,11 +22,11 @@
         "Illuminate\\Translation\\TranslationServiceProvider",
         "Illuminate\\Validation\\ValidationServiceProvider",
         "Illuminate\\View\\ViewServiceProvider",
-        "App\\Providers\\AppServiceProvider",
-        "App\\Providers\\BusServiceProvider",
-        "App\\Providers\\ConfigServiceProvider",
-        "App\\Providers\\EventServiceProvider",
-        "App\\Providers\\RouteServiceProvider",
+        "Suporte\\Providers\\AppServiceProvider",
+        "Suporte\\Providers\\BusServiceProvider",
+        "Suporte\\Providers\\ConfigServiceProvider",
+        "Suporte\\Providers\\EventServiceProvider",
+        "Suporte\\Providers\\RouteServiceProvider",
         "Collective\\Html\\HtmlServiceProvider",
         "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider"
     ],
@@ -42,11 +42,11 @@
         "Illuminate\\Session\\SessionServiceProvider",
         "Illuminate\\Validation\\ValidationServiceProvider",
         "Illuminate\\View\\ViewServiceProvider",
-        "App\\Providers\\AppServiceProvider",
-        "App\\Providers\\BusServiceProvider",
-        "App\\Providers\\ConfigServiceProvider",
-        "App\\Providers\\EventServiceProvider",
-        "App\\Providers\\RouteServiceProvider"
+        "Suporte\\Providers\\AppServiceProvider",
+        "Suporte\\Providers\\BusServiceProvider",
+        "Suporte\\Providers\\ConfigServiceProvider",
+        "Suporte\\Providers\\EventServiceProvider",
+        "Suporte\\Providers\\RouteServiceProvider"
     ],
     "deferred": {
         "command.app.name": "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider",

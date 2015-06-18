@@ -13,9 +13,24 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
-
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+/* Rotas para o exemplo de formulário de suporte */
+
+Route::controller('suporte', 'SuporteController');
+Route::get('produto/{id}/excluir', 'ProdutoController@excluir');
+Route::resource('produto', 'ProdutoController');
+
+Route::get('ola', function() {
+	$html = "<h1>Olá mundo</h1>";
+	$html .= "<p>Isto é um exemplo de rota com função embutida.</p>";
+	$html .= "<p>Note que não é o ideal a ser realizado, mas é o primeiro teste.</p>";
+	return $html;
+});
+
+Route::get('olavisao', function(){
+	return view('olamundo');
+});
