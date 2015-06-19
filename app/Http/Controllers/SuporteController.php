@@ -44,8 +44,20 @@ class SuporteController extends Controller {
      */
     public function postIndex(Request $request) {
 //        dd($request->all());
+        
+        $this->validate($request, [
+            'nome' => 'required|min:3',
+            'email' => 'required|email',
+            'data' => 'date_format:"d/m/Y"',
+            'descricao' => 'required|min:10',
+        ]);
+        
         \Suporte\Suporte::create($request->all());
         return view('suporte.solicitacao-recebida', ['input'=>$request->all()]);
+    }
+
+    private function redirecionaWithErrors($errors) {
+        return redirect('produto')->withErrors($errors);
     }
 
 }

@@ -7,6 +7,8 @@
 
 @section('content')
 
+@include('layout.mensagens')
+
 {!! Form::open(array('url' => 'suporte')) !!}
 <fieldset>
     <legend>Solicitação de suporte</legend>
