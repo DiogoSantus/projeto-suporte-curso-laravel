@@ -1,9 +1,19 @@
-## Parte 4 - Validações
+## Parte 5 - Twitter Bootstrap
 
-Na parte 4 de nosso exemplo utilizamos as validações com validators do Laravel.
+Na parte 5 de nosso exemplo vamos melhorar nossas visões inserindo o framework 
+Twitter Bootstrap.
 
-Veja as validações disponíveis em http://laravel.com/docs/5.1/validation#available-validation-rules
+Veja:
 
-Utilizamos também a classe HttpResponseException para redirecionamento de erros com mensagens.
+ - http://laravel.com/docs/5.1/views
+ - http://laravel.com/docs/5.1/blade#extending-a-layout
+ - http://laravel.com/docs/5.1/helpers#urls
+ - http://getbootstrap.com/
 
-*Não* esqueça de verificar as visões para entender como inserir as mensagens de erro.
+Utilizaremos intensivamente as composições de visão, layouts e helpers.
+
+Verifique os novos arquivos no diretório `public` com o framework Twitter Bootstrap.
+
+Em nosso layout principal inserimos os arquivos de estilo css e os scripts javascript com auxílio de helpers.
+
+Verifique os códigos html das visões que agora contem inserção de classes e estruturas do Twitter Bootstrap.

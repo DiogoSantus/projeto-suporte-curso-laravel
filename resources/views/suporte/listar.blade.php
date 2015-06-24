@@ -11,7 +11,7 @@
     Listagem de solicitações recebidas
 </h3>
 
-<table>
+<table class="table table-hover table-striped">
     <caption>Solicitações</caption>
     <thead>
         <tr>
