@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('sample.feature', 'Form e Input')
+@section('sample.feature', 'Twitter Bootstrap')
 @section('sample.title', 'Suporte')
 
 @section('content')
@@ -12,7 +12,11 @@
 </h3>
 
 <table class="table table-hover table-striped">
-    <caption>Solicitações</caption>
+    <caption>Solicitações - 
+        <a href="{{ url('suporte/create') }}" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> criar nova
+        </a>
+    </caption>
     <thead>
         <tr>
             <th>id</th>

@@ -14,10 +14,14 @@
 
 <!-- o helper abaixo cria o link completo em HTML
 primeiro parâmetro para a url, segundo para o título, terceiro para os parâmetros na url -->
-{!! link_to('produto/create','Novo produto') !!}
 
-<table>
-    <caption>Produtos</caption>
+<table class="table table-hover table-striped">
+    <caption>
+        Produtos - 
+        <a href="{{ url('produto/create') }}" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> criar novo 
+        </a>
+    </caption>
     <thead>
         <tr>
             <th>id</th>
@@ -31,10 +35,12 @@ primeiro parâmetro para a url, segundo para o título, terceiro para os parâme
         <td>{{$p->id}}</td>
         <td>{{$p->nome}}</td>
         <td>
-            <!-- o helper abaixo cria o link completo em HTML
-            primeiro parâmetro para a url, segundo para o título, terceiro para os parâmetros na url -->
-            {!! link_to('produto/'.$p->id . '/edit', 'Editar') !!}
-            {!! link_to('produto/'.$p->id . '/excluir', 'Excluir') !!}
+            <a href="{{ url('produto/'.$p->id . '/edit') }}" class="btn btn-info btn-sm">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> editar 
+            </a>
+            <a href="{{ url('produto/'.$p->id . '/excluir') }}" class="btn btn-danger btn-sm">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> excluir 
+            </a>
         </td>
     </tr>
     @endforeach

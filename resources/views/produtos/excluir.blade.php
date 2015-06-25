@@ -11,13 +11,13 @@
     Excluir produto
 </h3>
 
-<h4>
+<h4 class="alert alert-danger">
     Excluir produto {{$produto->nome}} ??
 </h4>
 
 {!! Form::open(array('url' => 'produto/'.$produto->id, 'method' => 'delete')) !!}
-    {!! Form::submit('Confirmar') !!} 
-    {!! link_to('produto', 'Cancelar') !!}
+    {!! Form::submit('Confirmar', ['class'=>'btn btn-danger']) !!} 
+    <a href="{{ url('produto') }}" class="btn btn-success">Cancelar</a>
 {!! Form::close() !!}
 
 @stop

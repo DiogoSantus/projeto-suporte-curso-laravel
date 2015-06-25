@@ -6,14 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Desenvolvimento com Framework</title>
 
-        <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('/css/bootstrap.sandstone.min.css') }}" rel="stylesheet">
         <link href="{{ asset('/css/sticky-footer.css') }}" rel="stylesheet">
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+        
+        <script src="{{ asset('/js/jquery-2.1.4.min.js') }}"></script>
+        <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
 
     </head>
     <body>
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,19 +35,19 @@
         
 
         <div class="container-fluid">
-            <h2>@yield('sample.title')</h2>
+            <h2 class="page-header">@yield('sample.title')</h2>
             @yield('content')
         </div>
 
         <footer class="footer">
-            <div class="container-fluid">
-                <p>Ademir Mazer Jr - ademir.mazer.jr@gmail.com - @nunomazer - http://ademir.winponta.com.br</p>
-                <p>Exemplos utilizado nas aulas de Desenvolvimento com Framework: </p>
-                <p>
-                    {!! Html::link('ola', 'Ola') !!} | 
-                    {!! Html::link('olavisao', 'Ola visão') !!} | 
-                    {!! Html::link('suporte', 'Suporte') !!} | 
-                </p>
+            <div class="container-fluid small">
+                Ademir Mazer Jr - ademir.mazer.jr@gmail.com - @nunomazer - http://ademir.winponta.com.br
+                <br/>
+                Exemplos utilizado nas aulas de Desenvolvimento com Framework:
+                <br/>
+                {!! Html::link('ola', 'Ola') !!} | 
+                {!! Html::link('olavisao', 'Ola visão') !!} | 
+                {!! Html::link('suporte', 'Suporte') !!} | 
             </div>
         </footer>
     </body>
