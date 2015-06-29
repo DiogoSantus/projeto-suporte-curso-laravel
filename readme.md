@@ -78,6 +78,12 @@ Para verificar se o usuário atual está autenticado
         // Usuário está "logado (ugh)" ...
     }
 
+### Retirando autenticação
+
+Basta chamar o método `logout` da facade `Auth`.
+
+    Auth::logout();
+
 ## Protegendo rotas
 
 Para proteger o acesso à rotas que exigem o usuário estar autenticado, é possível utilizar 
@@ -109,3 +115,4 @@ de anexar à sua rota:
 
         ...
     }
+
