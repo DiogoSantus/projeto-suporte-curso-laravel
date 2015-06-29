@@ -51,3 +51,29 @@ Algumas visões devem ser utilizadas para as funções de autenticação e local
 
 Após o usuário entrar com usuário e senha, será redirecionado para a rota indicada na
 propriedade `protected $redirectPath = '/dashboard';` do controlador `AuthController`.
+
+Em nosso controlador `AuthController` definimos `suporte/list` como nosso redirecionamento 
+após o login.
+
+    ...
+    protected $redirectPath = '/suporte/listar';
+    ...
+
+O método `validator` é responsável pela autenticação, e pode ser sobrescrito para 
+que você possa definir o comportamento de autenticação que melhor se adeque à sua aplicação.
+
+O método `create` é responsável pela criação de novos registros do modelo `App\User`, e pode
+ser sobrescrito para que você possa definir o comportamento de acordo com a necessidade de
+sua aplicação.
+
+### Acessando o objeto de usuário
+
+Para pegar o usuário autenticado, acesse o facade Auth:
+
+    $user = Auth::user();
+
+Para verificar se o usuário atual está autenticado
+
+    if (Auth::check()) {
+        // Usuário está "logado (ugh)" ...
+    }
