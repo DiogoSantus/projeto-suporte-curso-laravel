@@ -77,3 +77,35 @@ Para verificar se o usuário atual está autenticado
     if (Auth::check()) {
         // Usuário está "logado (ugh)" ...
     }
+
+## Protegendo rotas
+
+Para proteger o acesso à rotas que exigem o usuário estar autenticado, é possível utilizar 
+middlewares configurados à cada rota. Laravel dispõe do middleare `auth` localizado em 
+`app\Http\Middleware\Authenticate.php`, bastando anexar à rota que deve ser protegida.
+
+    // Usando uma closure na rota...
+
+    Route::get('profile', ['middleware' => 'auth', function() {
+        // Somente usuários autenticados podem entrar no perfil ...
+    }]);
+
+    // Usando um controlador ...
+
+    Route::get('profile', [
+        'middleware' => 'auth',
+        'uses' => 'ProfileController@show'
+    ]);
+
+Ao usar classes de controle você pode chamar o middleware no construtor ao invés
+de anexar à sua rota:
+
+    <?php
+
+    class AuthController {
+        public function __construct() {
+            $this->middleware('auth');
+        }
+
+        ...
+    }
