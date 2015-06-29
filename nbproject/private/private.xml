@@ -11,9 +11,10 @@
             <file>file:/home/mazer/Workspaces/aula/suporte/app/Http/routes.php</file>
         </group>
         <group name="winponta-php">
+            <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/app/Produto.php</file>
+            <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/app/Http/Controllers/ProdutoController.php</file>
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/resources/views/produtos/form.blade.php</file>
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/resources/views/suporte/listar.blade.php</file>
-            <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/public/css/sticky-footer.css</file>
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/resources/views/layout/mensagens.blade.php</file>
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/resources/views/suporte/form.blade.php</file>
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/resources/views/produtos/excluir.blade.php</file>
@@ -21,6 +22,7 @@
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/readme.md</file>
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/resources/views/produtos/listar.blade.php</file>
             <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/resources/views/layout/master.blade.php</file>
+            <file>file:/home/nuno/Workspaces/Aulas/php-oo/suporte/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php</file>
         </group>
     </open-files>
 </project-private>

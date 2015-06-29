@@ -1,24 +1,53 @@
-## Parte 5 - Twitter Bootstrap
+## Parte 6 - Autenticação
 
-Na parte 5 de nosso exemplo vamos melhorar nossas visões inserindo o framework 
-Twitter Bootstrap.
+Na parte 6 de nosso exemplo integraremos a autenticação disponível como um "esqueleto"
+para esta funcionalidade.
 
 Veja:
 
- - http://laravel.com/docs/5.1/views
- - http://laravel.com/docs/5.1/blade#extending-a-layout
- - http://laravel.com/docs/5.1/helpers#urls
- - http://getbootstrap.com/
- - http://bootswatch.com/
- - https://jquery.com/
+ - http://laravel.com/docs/5.1/authentication
 
-Utilizaremos intensivamente as composições de visão, layouts e helpers.
+O arquivo de configuração é localizado em `config/auth.php`, o qual contem
+várias opções documentadas para adequar o comportamento da autenticação.
 
-Verifique os novos arquivos no diretório `public` com o framework Twitter Bootstrap.
+### Banco de dados
 
-Em nosso layout principal inserimos os arquivos de estilo css e os scripts javascript com auxílio de helpers.
+O modelo de usuário que extende `Eloquent/Model` está em no arquivo `App/User.php`.
+É possível mudar o driver de autenticação se necessário.
 
-Verifique os códigos html das visões que agora contem inserção de classes e estruturas do Twitter Bootstrap.
+Ao usar o esquema padrão do framework, a largura do campo senha deve ter 60 caracteres.
 
-Note que estamos usando um tema do Bootswatch, chamado sandstone. Bootswatch oferece uma série de temas sobre 
-Twitter Bootstrap que agilizam o desenvolvimento de diferentes layouts visuais.
+Também é necessário um campo `remember_token` que permite valor nulo.
+
+### Controlador
+
+O controlador está no caminho `App\Http\Controllers\Auth\AuthController.php` o qual 
+registra e autentica o usuário, ja o controlador `App\Http\Controllers\Auth\PasswordController.php`
+é responsável pela recuperação de senha do usuário.
+
+### Rotas
+
+Rotas necessárias para o funcionamento, devem ser inseridas em `app/Http/routes.php`
+caso não existam.
+
+    // Authentication routes...
+    Route::get('auth/login', 'Auth\AuthController@getLogin');
+    Route::post('auth/login', 'Auth\AuthController@postLogin');
+    Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+    // Registration routes...
+    Route::get('auth/register', 'Auth\AuthController@getRegister');
+    Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+### Visões
+
+Algumas visões devem ser utilizadas para as funções de autenticação e localizadas em 
+`resources/views/auth`. 
+
+- resources/views/auth/login.blade.php
+- resources/views/auth/register.blade.php
+
+## Autenticando
+
+Após o usuário entrar com usuário e senha, será redirecionado para a rota indicada na
+propriedade `protected $redirectPath = '/dashboard';` do controlador `AuthController`.
