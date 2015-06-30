@@ -13,7 +13,7 @@ class AuthController extends Controller {
      * Configure esta propriedade para redirecionar o usuário para a rota desejada
      * após a autenticacao com sucesso
      */
-    protected $redirectPath = '/suporte/listar';
+    protected $redirectPath = '/suporte/list';
     
     /*
       |--------------------------------------------------------------------------

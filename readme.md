@@ -116,3 +116,15 @@ de anexar à sua rota:
         ...
     }
 
+## Iniciar o banco de dados 
+
+Para preparar o banco de dados com a tabela base de usuários e um usuário administrador 
+inicial, execute os comandos abaixo na linha de comando:
+
+    php artisan migrate:install
+    php artisan migrate
+    php artisan db:seed
+
+Usuário: admin
+Email: admin@admin.com
+Senha: admin

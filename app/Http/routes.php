@@ -18,11 +18,26 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-/* Rotas para o exemplo de formulário de suporte */
+/**
+ * Rotas para o exemplo de formulário de suporte, protegendo o acesso pelo agrupamento
+ * de rotas, pode-se adicionar outras rotas para serem protegidas neste agrupamento, como 
+ * as rotas para produtos.
+ * Porém se uma rota, como suporte/create e suporte (post), que pode ser acessado livremente para 
+ * criar uma nova solicitação de suporte
+ **/
 
-Route::controller('suporte', 'SuporteController');
-Route::get('produto/{id}/excluir', 'ProdutoController@excluir');
-Route::resource('produto', 'ProdutoController');
+Route::get('suporte/create', 'SuporteController@getCreate');
+$router->group(['middleware' => 'auth'], function($router) {
+    Route::controller('suporte', 'SuporteController');
+    Route::get('produto/{id}/excluir', 'ProdutoController@excluir');
+    Route::resource('produto', 'ProdutoController');
+});
+/**
+ * A rota com post para suporte está depois do agrupamento de autenticação
+ * para forçar que seja salva a solicitação sem necessitar login
+ */
+Route::post('suporte', 'SuporteController@postIndex');
+
 
 Route::get('ola', function() {
 	$html = "<h1>Olá mundo</h1>";
